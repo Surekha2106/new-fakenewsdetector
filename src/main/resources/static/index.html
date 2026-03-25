@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fake News Detector</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-text">TruthAI</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#analyzer">Analyzer</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#" id="logoutNavItem" class="nav-logout-btn" style="display: block;" onclick="handleLogout()">Logout</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Verifying Truth in a Digital Age</h1>
+            <p class="hero-subtitle">Experience the next generation of credibility analysis. Our AI engine scans thousands of linguistic patterns to ensure your news is verified.</p>
+            <div class="hero-btns">
+                <a href="#analyzer" class="btn btn-gradient">Open Analyzer</a>
+                <a href="#features" class="btn btn-primary">How it Works</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Features Section -->
+        <section id="features" class="features-grid reveal">
+            <div class="feature-card glass-card">
+                <div class="feature-icon">🧠</div>
+                <h3>Weka AI Engine</h3>
+                <p>Powered by advanced Naive Bayes classification for high-precision detection.</p>
+            </div>
+            <div class="feature-card glass-card">
+                <div class="feature-icon">🔍</div>
+                <h3>NLP Processing</h3>
+                <p>Natural Language Processing clears out stop-words and focuses on semantic meaning.</p>
+            </div>
+            <div class="feature-card glass-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Real-time Metrics</h3>
+                <p>Get instant feedback with confidence scores and detailed analysis logs.</p>
+            </div>
+        </section>
+
+        <!-- Analyzer Section -->
+        <section id="analyzer" class="section glass-card reveal">
+            <h2 class="section-title">Truth Analyzer</h2>
+            <div class="input-container">
+                <textarea id="newsInput" placeholder="Enter headline or article text here..." rows="6"></textarea>
+                <div class="analyzer-controls">
+                    <button id="analyzeBtn" class="btn btn-gradient">
+                        <span class="btn-text">Initiate Smart Scan</span>
+                        <span class="loader hidden" id="analyzeLoader"></span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Result Card -->
+            <div id="resultCard" class="result-card hidden">
+                <div class="scan-line"></div>
+                <div class="result-header">
+                    <h3 class="result-label" id="predictionLabel">REAL NEWS</h3>
+                    <div class="confidence-circle" id="confidenceCircle">
+                        <span id="confidenceScore">0%</span>
+                    </div>
+                </div>
+                <div class="result-body">
+                    <h4>Analysis Summary:</h4>
+                    <p id="analyzedText">...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section glass-card reveal">
+            <h2 class="section-title">Analytics Dashboard</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <p class="stat-title">Total Analyses</p>
+                    <h3 class="stat-value" id="totalCount">0</h3>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-title">Fake News</p>
+                    <h3 class="stat-value text-red" id="fakeCount">0</h3>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-title">Real News</p>
+                    <h3 class="stat-value text-green" id="realCount">0</h3>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="statsChart"></canvas>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="section glass-card reveal">
+            <h2 class="section-title">Recent History</h2>
+            <div class="history-list" id="historyList">
+                <p class="text-muted" style="text-align: center;">Loading history...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AI Fake News Detector. Built with Java Spring Boot & Machine Learning.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

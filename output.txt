@@ -1,0 +1,47 @@
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>if "" == "" (set "HOME=C:\Users\A.SUREKHA" ) 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>if not "" == "" goto skipRcPre 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>if exist "C:\Users\A.SUREKHA\mavenrc_pre.bat" call "C:\Users\A.SUREKHA\mavenrc_pre.bat" 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>if exist "C:\Users\A.SUREKHA\mavenrc_pre.cmd" call "C:\Users\A.SUREKHA\mavenrc_pre.cmd" 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>set ERROR_CODE=0 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>if not "C:\Program Files\Java\jdk-25" == "" goto OkJHome 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>if exist "C:\Program Files\Java\jdk-25\bin\java.exe" goto init 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>set MAVEN_PROJECTBASEDIR= 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>IF NOT "" == "" goto endDetectBaseDir 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>set EXEC_DIR=D:\Documents - Copy (2)\project\new fakenewsdetector 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>set WDIR=D:\Documents - Copy (2)\project\new fakenewsdetector 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>IF EXIST "D:\Documents - Copy (2)\project\new fakenewsdetector"\.mvn goto baseDirFound 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>set MAVEN_PROJECTBASEDIR=D:\Documents - Copy (2)\project\new fakenewsdetector 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>cd "D:\Documents - Copy (2)\project\new fakenewsdetector" 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>goto endDetectBaseDir 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>IF NOT EXIST "D:\Documents - Copy (2)\project\new fakenewsdetector\.mvn\jvm.config" goto endReadAdditionalConfig 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>SET MAVEN_JAVA_EXE="C:\Program Files\Java\jdk-25\bin\java.exe" 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>set WRAPPER_JAR="D:\Documents - Copy (2)\project\new fakenewsdetector\.mvn\wrapper\maven-wrapper.jar" 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>set WRAPPER_LAUNCHER=org.apache.maven.wrapper.MavenWrapperMain 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>set DOWNLOAD_URL="https://repo.maven.apache.org/maven2/io/takari/maven-wrapper/0.5.6/maven-wrapper-0.5.6.jar" 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>FOR /F "tokens=1,2 delims==" %A IN ("D:\Documents - Copy (2)\project\new fakenewsdetector\.mvn\wrapper\maven-wrapper.properties") DO (IF "%A" == "wrapperUrl" SET DOWNLOAD_URL=%B ) 
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>(IF "D:\Documents - Copy (2)\project\new fakenewsdetector\.mvn\wrapper\maven-wrapper.properties" == "wrapperUrl" SET DOWNLOAD_URL= ) 
+\project\new was unexpected at this time.
+
+D:\Documents - Copy (2)\project\new fakenewsdetector>		"[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $webclient.DownloadFile('"https://repo.maven.apache.org/maven2/io/takari/maven-wrapper/0.5.6/maven-wrapper-0.5.6.jar"', '"D:\Documents - Copy (2)\project\new fakenewsdetector\.mvn\wrapper\maven-wrapper.jar"')"^
