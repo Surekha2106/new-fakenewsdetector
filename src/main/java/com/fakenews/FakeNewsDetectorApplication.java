@@ -20,4 +20,4 @@ public class FakeNewsDetectorApplication {
 		System.out.println("=".repeat(60) + "\n");
 	}
 }
-//.\mvnw.cmd spring-boot:run
+
