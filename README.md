@@ -1,48 +1,80 @@
-# AI Fake News Detector
+# 🛡️ TruthAI: Advanced Fake News Detector
 
-A full-stack web application built with **Java (Spring Boot)** and **Machine Learning (Weka)** to classify whether a news article is **Real or Fake**. 
-Features a **premium Lavender and Purple themed user interface** constructed with Glassmorphism design principles.
+<p align="center">
+  <img src="assets/dashboard_mockup.png" alt="TruthAI Dashboard Mockup" width="800">
+</p>
 
-## Features
-- **Machine Learning Analysis**: Classifies text using a trained Naive Bayes classifier with TF-IDF vectorization.
-- **Natural Language Processing**: Built-in Java text preprocessor for tokenization, stopword removal, lowercasing, and punctuation removal.
-- **REST API**: Clean endpoints for predicting news accuracy, fetching history, and viewing stats.
-- **Premium UI**: Responsive, animated, dark-mode Glassmorphism UI.
-- **Analytics Dashboard**: View aggregate statistics and interactive Chart.js widgets.
-- **Persistent Storage**: Save history and stats to a MySQL database using Spring Data JPA.
+<p align="center">
+  <strong>Combating Misinformation with Artificial Intelligence and Linguistic Analysis.</strong>
+</p>
 
-## Prerequisites
-- Java 17+
-- Maven 3.6+
-- MySQL Server (Running on localhost:3306)
+---
 
-## Database Setup
-1. Ensure your local MySQL server is running.
-2. Create a database named `fake_news_db` or ensure your MySQL user has privileges to create it:
-   ```sql
-   CREATE DATABASE fake_news_db;
-   ```
-3. Update `src/main/resources/application.properties` if your MySQL username and password differ from the default (`root` / *empty*).
+## 🌟 Overview
 
-## How to Run
-1. Open a terminal in the project root directory.
-2. Run the application using Maven:
+**TruthAI** is a high-performance full-stack web application built to verify the credibility of news in real-time. By integrating **Machine Learning (Weka)** with **Natural Language Processing (NLP)**, the system analyzes text patterns to distinguish between factual reporting and deceptive misinformation.
+
+Featuring a cutting-edge **Glassmorphism UI**, TruthAI provides a premium experience for journalists, researchers, and everyday readers to cross-validate information through a data-driven lens.
+
+---
+
+## ✨ Key Features
+
+- **🧠 Intelligent Classification**: Powered by **Naive Bayes** and **TF-IDF vectorization** for high-precision detection.
+- **🔡 NLP Preprocessor**: Custom-built engine for semantic cleaning, stop-word removal, and linguistic normalization.
+- **📊 Interactive Analytics**: Dynamic dashboards featuring **Chart.js** integration to track global news trends.
+- **💎 Premium UX/UI**: Immersive Lavender & Purple themed interface built with modern Glassmorphism principles.
+- **⚡ Real-time Verification**: Instant feedback with detailed confidence scores and analysis logs.
+- **🗄️ Persistent History**: Securely track and manage past analyses using **Spring Data JPA**.
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technologies |
+|---|---|
+| **Backend** | Java 17, Spring Boot, Spring Data JPA |
+| **Machine Learning** | Weka, Naive Bayes, StringToWordVector |
+| **Frontend** | HTML5, CSS3 (Glassmorphism), Vanilla JS |
+| **Visualization** | Chart.js 4.x |
+| **Database** | H2 Database (In-Memory) / MySQL |
+| **Styling** | Custom Vanilla CSS (Dark Mode Optimization) |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- **Java 17+**
+- **Maven 3.6+**
+
+### Installation & Run
+1. **Clone the repository**:
    ```bash
-   mvn spring-boot:run
-   ```
-3. The server will start on port 8080.
-4. Open your web browser and navigate to:
-   ```text
-   http://localhost:8080
+   git clone https://github.com/your-username/truth-ai.git
+   cd truth-ai
    ```
 
-## API Endpoints
-- `POST /api/predict`: Send JSON `{ "text": "news here" }` to get a prediction.
-- `GET /api/history`: Returns a list of all past predictions.
-- `GET /api/stats`: Returns analytics numbers.
+2. **Run the application**:
+   ```bash
+   .\mvnw.cmd spring-boot:run
+   ```
 
-## Tech Stack
-**Frontend**: HTML5, CSS3 (Glassmorphism), Vanilla JavaScript, Chart.js, Google Fonts (Inter, Poppins)
-**Backend**: Java 17, Spring Boot, Spring Data JPA, Hibernate
-**Database**: MySQL
-**Machine Learning**: Weka (StringToWordVector filter, NaiveBayes Classifier)
+3. **Launch the Dashboard**:
+   Open [http://localhost:8081](http://localhost:8081) in your browser.
+
+---
+
+## 📐 Architecture
+
+TruthAI follows a modular architecture for scalability:
+- **`com.fakenews.ml`**: Core Machine Learning services and model training.
+- **`com.fakenews.preprocessing`**: Linguistic analysis and text normalization.
+- **`com.fakenews.controller`**: REST API endpoints for seamless frontend-backend communication.
+- **`static/js`**: Asynchronous state management and dynamic UI updates.
+
+---
+
+<p align="center">
+  Built with ❤️ for a more informed world.
+</p>
